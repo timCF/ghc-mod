@@ -9,6 +9,15 @@ Vim, Atom, IntelliJ and VSCode.
 - for [people developing Haskell IDEs (Using ghc-mod as an IDE backend program)](#using-ghc-mod-as-an-ide-backend-program)
 - for [developing Haskell tooling (Using ghc-mod as a library)](#using-ghc-mod-as-a-library)
 
+## Installation
+
+```
+git clone git@github.com:timCF/ghc-mod.git
+cd ./ghc-mod
+stack build
+cp ./.stack-work/install/x86_64-osx/lts-10.2/8.2.2/bin/* ~/.local/bin
+```
+
 ## Overview
 
 ### Using ghc-mod in your Development Environment
@@ -26,7 +35,7 @@ sit and wait for you to type a command, exiting when an empty line is
 entered. Interactive mode is pretty much always faster than single shot mode,
 since it gives ghc-mod the ability to cache the compiler session between
 commands. On the other hand, it needs more memory because it keeps these things
-cached. 
+cached.
 
 Single shot mode is pretty much only there for (backwards) compatibility with
 Vim, since it only recently got the ability to talk to background processes
@@ -35,7 +44,7 @@ calling the sub-commands of the `ghc-mod` program. Since recompiling large
 projects can be really, really slow, you really should prefer interactive mode.
 
 As a rule of thumb, all commands available in single shot mode are available in
-interactive mode. A list of the former can be obtained by running 
+interactive mode. A list of the former can be obtained by running
 `$ ghc-mod --help`.
 
 If you're developing a new ghc-mod frontend, we'd love to hear from you! Please
