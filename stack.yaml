@@ -1,6 +1,6 @@
 resolver: lts-10.2
 packages:
-- location: .
+- .
 
 extra-deps:
 - extra-1.5.3
